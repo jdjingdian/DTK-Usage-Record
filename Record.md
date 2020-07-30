@@ -19,7 +19,7 @@ Solution: When you need to use `pod install`, just open terminal in Rosetta mode
 1. Boot into Recovery.
 2. Choose Apple Icon——Startup Disk——System——Security Policy——Reduced Security&&Allow kernel extensions from identified developers
 3. Exit Startup Disk，choose Terminal in Utilities
-4. Type`csrutil disable`
+4. Type  csrutil disable
 5. Reboot and good to go
 ```
 
@@ -30,3 +30,16 @@ Solution: When you need to use `pod install`, just open terminal in Rosetta mode
 3. Press and hold the power button and connect power cable, continue pressing power button for 3 seconds.
 4. Use USB-C connector closest to HDMI port to connect with other mac
 ```
+
+#### 5. Install iOS apps on DTK
+
+**Introduction:**
+
+**Ipa** download directly from the App Store or helper like *iMazing* are encrypted. This kind of ipa can not be run on the DTK, so we need to decrypt the app and resign it.
+
+```markdown
+1. 
+
+
+```
+
