@@ -47,7 +47,7 @@
 		codesign -d --entitlements :- "$1" > temp.xcent
 		codesign -f -s "Apple Development: 你的开发者名字Han Mei Mei (XXXXXXXXXX)" --entitlements temp.xcent "$1"/Frameworks/*
 		codesign -f -s "Apple Development: 你的开发者名字Han Mei Mei (XXXXXXXXXX)" --entitlements temp.xcent "$1"`
-6. 在终端拖入脚本，按下空格，再拖入要重签名的.app(解压缩已经解密的ipa包，.app在Payload目录下)
+6. 在终端拖入脚本，按下空格，再拖入要重签名的.app(安装后显示包内容，找到Payload目录下的.app)
 7. 如无意外，应该可以成功运行
 
 ```

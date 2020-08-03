@@ -38,8 +38,23 @@ Solution: When you need to use `pod install`, just open terminal in Rosetta mode
 **Ipa** download directly from the App Store or helper like *iMazing* are encrypted. This kind of ipa can not be run on the DTK, so we need to decrypt the app and resign it.
 
 ```markdown
-1. 
+1. Decrypt the ipa(You may need a jailbroken device to do this)
+2. Turn off SIP
+3. Turn off AMFI(Open Terminal and type: sudo nvram boot-args="amfi_get_out_of_my_way=1") . You need to reboot to take effect.
+4. Install Developer certificate on your DTK
+5. Create a script
+	 `#!/bin/sh
+		codesign -d --entitlements :- "$1" > temp.xcent
+		codesign -f -s "Apple Development: 你的开发者名字Han Mei Mei (XXXXXXXXXX)" --entitlements temp.xcent "$1"/Frameworks/*
+		codesign -f -s "Apple Development: 你的开发者名字Han Mei Mei (XXXXXXXXXX)" --entitlements temp.xcent "$1"`
+6. Drag the script to the Terminal and then drag the app you want to resign after it.（Show the content and you will find the real .app file in Payload directory
+7. The unmodified iOS app should now be running smoothly.
+```
 
-
+#### 6. Install X86 VMs
+```
+1. Download the latest ipa installer from UTM's GitHub repository.
+2. Install it follow Section 5.
+3. Launch UTM and install virtual machine.
 ```
 
